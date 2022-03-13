@@ -1,0 +1,14 @@
+name: homie
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - sqlalchemy
+  - numpy
+  - pandas
+  - jupyter
+  - ipython
+  - ipykernel
+  - pyprojroot
+  - psycopg2
