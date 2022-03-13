@@ -26,7 +26,7 @@ def _load_rents(session: Session):
     df_rents = pd.read_parquet(path.data_processed_dir("rents.parquet"))
     logging.info("Inserting on rents table")
     for row in df_rents.itertuples():
-        # Save rooms and bathrooms to check whether they are NaN later
+        # Save rooms, bathrooms and price to check whether they are NaN later
         rooms = getattr(row, "rooms")
         bathrooms = getattr(row, "bathrooms") 
         price = getattr(row, "price")
@@ -35,7 +35,7 @@ def _load_rents(session: Session):
             id=getattr(row, "id"), 
             neighbourhood_id=getattr(row, "neighbourhood_id"),
             rooms=math.floor(rooms) if not math.isnan(rooms) else None,
-            bathrooms = math.floor(bathrooms) if not math.isnan(bathrooms) else None,
+            bathrooms=math.floor(bathrooms) if not math.isnan(bathrooms) else None,
             parking=getattr(row, "parking"),
             price=price if not math.isnan(price) else None, 
             geom=getattr(row, "geom"),
