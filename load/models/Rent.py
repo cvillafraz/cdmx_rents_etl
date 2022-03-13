@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, ForeignKey, DateTime, Float, Boolean
 from geoalchemy2 import Geometry
-from ..base import Base
+from base import Base
 
 
 class Rent(Base):

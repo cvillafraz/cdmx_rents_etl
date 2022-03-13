@@ -1,6 +1,6 @@
 import logging
-from .neighbourhoods import transform_neighbourhoods
-from .rents import transform_rents
+from neighbourhoods import transform_neighbourhoods
+from rents import transform_rents
 
 
 logging.basicConfig(level=10)

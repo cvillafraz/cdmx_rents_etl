@@ -1,8 +1,8 @@
 import logging
 import math
 import pandas as pd
-from .base import engine, Base, Session
-from .models import Neighbourhood, Rent
+from base import engine, Base, Session
+from models import Neighbourhood, Rent
 import utils.paths as path
 
 
@@ -29,14 +29,15 @@ def _load_rents(session: Session):
         # Save rooms and bathrooms to check whether they are NaN later
         rooms = getattr(row, "rooms")
         bathrooms = getattr(row, "bathrooms") 
-        
+        price = getattr(row, "price")
+
         rent = Rent(
             id=getattr(row, "id"), 
             neighbourhood_id=getattr(row, "neighbourhood_id"),
             rooms=math.floor(rooms) if not math.isnan(rooms) else None,
             bathrooms = math.floor(bathrooms) if not math.isnan(bathrooms) else None,
             parking=getattr(row, "parking"),
-            price=getattr(row, "price"), 
+            price=price if not math.isnan(price) else None, 
             geom=getattr(row, "geom"),
             date_in=getattr(row, "date_in")
         )

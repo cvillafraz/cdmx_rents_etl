@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer
 from geoalchemy2 import Geometry
-from ..base import Base
+from base import Base
 
 
 class Neighbourhood(Base):
