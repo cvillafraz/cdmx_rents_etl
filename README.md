@@ -18,6 +18,8 @@ a Heroku Postgres instance
 
     ├── LICENSE
     ├── README.md
+    ├── index.py           <- Main script. Runs transform and load functions.
+    │
     ├── data
     │   ├── processed      <- The final, canonical data sets to load.
     │   └── raw            <- The original, immutable data dump.
