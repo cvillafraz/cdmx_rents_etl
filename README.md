@@ -8,9 +8,10 @@ a Heroku Postgres instance
 1. Create a Heroku app called homie-db, and install [Heroku Postgres](https://www.heroku.com/postgres)
 2. Connect to the instance from PgAdmin or psql, and create a Postgres function executing the code in load/assign_neighbourhood_id
 3. Login to Heroku using the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-4. Create Conda environment from environment.yml
+4. Create and activateConda environment from environment.yml
    ```
    conda env create -f environment.yml
+   conda activate homie_etl
    ```
 5. Run index.py file
 
