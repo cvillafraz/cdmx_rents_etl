@@ -11,7 +11,7 @@ a Heroku Postgres instance
 4. Create and activate Conda environment from environment.yml
    ```
    conda env create -f environment.yml
-   conda activate homie_etl
+   conda activate homie
    ```
 5. Run index.py file
 
