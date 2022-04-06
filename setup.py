@@ -17,7 +17,7 @@ def readme() -> str:
 
 
 setup(
-    name="homie_etl",
+    name="cdmx_rents_etl",
     version="0.1.0",
     author="Ciro Villafraz",
     author_email="cirov@protonmail.com",

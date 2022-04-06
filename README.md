@@ -1,17 +1,17 @@
-# HOMIE ETL
+# CDMX rents ETL
 
 A pipeline to transform neighbourhoods and properties for rent data from Mexico City, and load the data into
 a Heroku Postgres instance
 
 ## Steps to replicate
 
-1. Create a Heroku app called homie-db, and install [Heroku Postgres](https://www.heroku.com/postgres)
+1. Create a Heroku app called cdmx-rents-db, and install [Heroku Postgres](https://www.heroku.com/postgres)
 2. Connect to the instance from PgAdmin or psql, and create a Postgres function executing the code in load/assign_neighbourhood_id
 3. Login to Heroku using the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 4. Create and activate Conda environment from environment.yml
    ```
    conda env create -f environment.yml
-   conda activate homie
+   conda activate cdmx_rents_etl
    ```
 5. Run index.py file
 

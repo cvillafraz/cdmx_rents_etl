@@ -8,7 +8,7 @@ logging.basicConfig(level=10)
 def make_engine():
     DATABASE_URL = (
         subprocess.check_output(
-            "heroku config:get DATABASE_URL -a homie-db", shell=True
+            "heroku config:get DATABASE_URL -a cdmx-rents-db", shell=True
         )
         .decode()
         .replace("postgres", "postgresql")

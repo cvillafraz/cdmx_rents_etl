@@ -1,4 +1,4 @@
-name: homie
+name: cdmx_rents_etl
 channels:
   - conda-forge
   - defaults
